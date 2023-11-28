@@ -1,0 +1,20 @@
+#ifndef RADIO_HPP
+#define RADIO_HPP
+
+#include "device.hpp"
+
+class Radio : public Device{
+    public:
+        bool isEnabled();
+        void enable();
+        void desable();
+        int get_volume();
+        void set_volume(int percent);
+        int get_channel();
+        void set_channel(int channel);
+    private:
+        int volume_;
+        int channel_;
+};
+
+#endif //RADIO_HPP
